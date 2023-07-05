@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: yellowgreen;
+    padding: 0 20px 0 50px;
+}
+
+.nav-menu {
+    display: flex;
+    /* background-color: red; */
+    width: 80%;
+    justify-content: space-between;
+    transition: all 1s;
+}
+
+.nav-menu div {
+    display: flex;
+}
+.nav-menu div a {
+    padding: 5px 15px;
+    border-radius: 2px;
+    transition: all .4s;
+}
+
+.nav-menu div a:hover {
+    background-color: rgba(255, 11, 11, 0.166);
+}
+
+.logo {
+    width: 200px;
+    height: fit-content;
+    max-height: 50px;
+}
+
+.menu {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 1250px){
+    body {
+        background-color: rgb(0, 255, 68);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        background-color: blue;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        max-width: 250px;
+        padding: 20px 0;
+        transform: translateX(100%);
+    }
+
+    .nav-menu div {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu {
+        display: block;
+    }
+
+    .comeback {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hide {
+    display: none;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px solid rgb(246, 246, 165);
+    animation-name: loader;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
